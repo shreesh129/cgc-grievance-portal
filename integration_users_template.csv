@@ -1,0 +1,4 @@
+login_id,name,role,password,department,designation,email,phone,mentor_login_id,source_system,external_id,active
+student001,Demo Student,student,StudentPass123,Computer Science,Student,student@example.edu,,mentor001,college_erp,S001,true
+teacher001,Demo Teacher,teacher,TeacherPass123,Computer Science,Assistant Professor,teacher@example.edu,,,college_erp,T001,true
+mentor001,Demo Mentor,mentor,MentorPass123,Computer Science,Mentor,mentor@example.edu,,,college_erp,M001,true

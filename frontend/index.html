@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>College Grievance Intelligence System</title></head>
+<body>
+<h1>College Grievance System</h1>
+<p>V5 functional frontend. The visual/UI layer can be styled by your team without changing the API.</p>
+
+<section><h2>Secure Login</h2>
+<select id="portal">
+<option value="student">Student Portal</option><option value="teacher">Teacher Portal</option>
+<option value="mentor">Mentor Portal</option><option value="administration">Administration Portal</option>
+<option value="hod">HOD Portal</option><option value="dean">Dean Portal</option>
+<option value="managing_director">Managing Director Portal</option><option value="vice_chancellor">Vice Chancellor Portal</option>
+</select>
+<input id="id" maxlength="80" placeholder="GR Number / Employee ID">
+<input id="password" type="password" maxlength="128" placeholder="Password">
+<button id="login">Login</button> <button id="logout" disabled>Logout</button>
+<p id="sessionState">Not authenticated</p></section>
+
+<section id="complaintSection" hidden><h2>Complaint</h2>
+<select id="complaintPortal"><option value="college">college</option><option value="hostel">hostel</option><option value="common">common</option><option value="mess">mess</option><option value="hr">hr</option><option value="staffroom">staffroom</option></select>
+<input id="category" maxlength="100" placeholder="Category">
+<input id="sub" maxlength="160" placeholder="Sub-category">
+<textarea id="desc" maxlength="10000" placeholder="Description (minimum 10 characters)"></textarea>
+<input id="gender" maxlength="20" placeholder="Gender (hostel only)">
+<input id="hostel" maxlength="80" placeholder="Hostel">
+<input id="block" maxlength="50" placeholder="Block no.">
+<input id="class" maxlength="80" placeholder="Class no.">
+<input id="lab" maxlength="80" placeholder="Lab no.">
+<input id="staffroom" maxlength="100" placeholder="Staffroom">
+<select id="authority"><option value="">Teacher initial authority</option><option value="administration">Administration</option><option value="hod">HOD</option></select>
+<label><input id="anon" type="checkbox"> Submit anonymously</label><br>
+<button id="record">Start voice recording</button><button id="stop" disabled>Stop</button>
+<button id="submit">Submit complaint</button><p id="voiceState"></p></section>
+
+<section><h2>Track Complaint</h2>
+<input id="track" maxlength="32" placeholder="GRV-XXXXXXXXXX"><button id="trackBtn">Track</button>
+<div id="trackOut"></div>
+<div id="actions" hidden>
+<textarea id="readdressReason" placeholder="Reason for readdressal"></textarea><button id="readdress">Request readdressal</button>
+<select id="rating"><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select>
+<input id="feedbackComment" maxlength="2000" placeholder="Feedback comment"><button id="feedback">Submit feedback</button>
+</div></section>
+
+<section id="authoritySection" hidden><h2>Authority Dashboard</h2><button id="refresh">Refresh</button>
+<div id="dash"></div><div id="queue"></div></section>
+<pre id="out"></pre>
+<script src="app.js"></script>
+</body></html>
